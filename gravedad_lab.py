@@ -104,3 +104,15 @@ plt.title("Regresión Cuadrática para la práctica de la Gravedad")
 plt.legend()
 plt.grid()
 plt.show()
+
+# =======-------- SALIDA/OUTPUT DEL CÓDIGO --------=======
+
+#  python gravedad_lab.py
+# Coeficientes de la regresión cuadrática ± la incertidumbre del dato:
+# a (c_3) = 4.98088229 ± 0.04862939
+# b (c_2) = 0.65711471 ± 0.00599968
+# c (c_1) = -0.00020080 ± 0.00016174
+# Gravedad experimental (g) = 9.9618 m/s^2
+# El error calculado respecto al valor teórico es: 1.8585%
+
+# En la visualización de datos, debería obtener similitud con esta imagen: "RC.png"
