@@ -47,6 +47,7 @@ t = np.array([
     0.114234,
 ])  # tiempos, cada uno en segundos
 
+
 # =======-------- CÁLCULOS PARA LA REGRESIÓN CUADRÁTICA --------=======
 
 # regresión cuadrática de la forma: y = ax^2 + bx + c
@@ -65,8 +66,8 @@ fitted_distancias = a * t**2 + b * t + c
 
 
 def calcular_error(
-    valor_teorico: int | float = 9.78,  # este dato es g teorica
-    valor_experimental: float = None,  # este dato es el error porcentual deseado
+    valor_teorico: int | float = 9.78,  # este dato es g teorica (tomado convencionalmente).
+    valor_experimental: float = None,  # este dato es g obtenido en la práctica de lab.
 ):
     '''
     `calcular_error()` devuelve el error respecto al dato teórico.\n
@@ -83,8 +84,9 @@ print(f"Coeficientes de la regresión cuadrática ± la incertidumbre del dato:"
 print(f"a (c_3) = {a:.8f} ± {inc_a:.8f}")
 print(f"b (c_2) = {b:.8f} ± {inc_b:.8f}")
 print(f"c (c_1) = {c:.8f} ± {inc_c:.8f}")
-print(f"Gravedad experimental (g) = {g_exp:.4f} m/s^2")
-print(f"El error calculado respecto al valor teórico es: {calcular_error(valor_experimental=g_exp):.4f}%")
+print(f"Gravedad experimental (g) = {g_exp:.8f} m/s^2")
+print(f"El error calculado respecto al valor teórico es: {calcular_error(valor_experimental=g_exp):.8f}%")
+
 
 # =======-------- GRAFICAR RESULTADOS Y VISUALIZACIÓN DE LOS DATOS --------=======
 
@@ -92,7 +94,7 @@ plt.figure(figsize=(8, 6))  # tamaño de la gráfica
 
 plt.scatter(t, distancias, label="Datos experimentales", color="blue")  # colección de los datos originales
 
-# graficar RC ajustado
+# graficar RC ajustada
 plt.plot(t, fitted_distancias, label=f"Ajuste cuadrático: $y = {a:.4f}x^2 + {b:.4f}x + {c:.4f}$", color="red")
 plt.xlabel("Tiempo (s)")  # etiqueta para el eje `x`
 plt.ylabel("Distancia (m)")  # etiqueta para el eje `y`
@@ -104,6 +106,7 @@ plt.title("Regresión Cuadrática para la práctica de la Gravedad")
 plt.legend()
 plt.grid()
 plt.show()
+
 
 # =======-------- SALIDA/OUTPUT DEL CÓDIGO --------=======
 
