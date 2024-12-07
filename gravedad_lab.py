@@ -19,7 +19,10 @@ t: tiempos medidos en la práctica.
 coeficientes: referencia a coeficientes del polinomio cuadrático.
 fitted: ajustado / corregido.
 RC: Regresión Cuadrática.
-appreciation: apreciación de la toma de datos, este es proporcionado por el software usado: PhysicsSensor>Sonoscopio
+appreciation: apreciación de la toma de datos, este es proporcionado por el software usado: PhysicsSensor>Sonoscopio.
+g_exp: Gravedad Experimental.
+std_errors: Errores Estándar.
+inc: Incertidumbre (±).
 '''
 
 
